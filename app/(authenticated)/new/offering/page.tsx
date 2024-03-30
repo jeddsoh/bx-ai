@@ -5,7 +5,7 @@ import { Container, Heading, Button, Card, TextField } from '@radix-ui/themes'
 import { createNewOffering } from './actions'
 
 export default async function NewOfferingPage() {
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: any) => {
     event.preventDefault() // Prevent the default form submission behavior
 
     // Construct an object with the input values
@@ -42,11 +42,9 @@ export default async function NewOfferingPage() {
             <TextField.Slot></TextField.Slot>
           </TextField.Root>
           <Button asChild color="gray" variant="soft">
-          <a href="/dashboard">Cancel</a>
-        </Button>
-        <Button>
-          Create Offering
-        </Button>
+            <a href="/dashboard">Cancel</a>
+          </Button>
+          <Button>Create Offering</Button>
         </form>
       </Card>
     </Container>
