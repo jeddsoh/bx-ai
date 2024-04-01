@@ -18,7 +18,7 @@ export default function NewDocument() {
       <Dialog.Content maxWidth="450px">
         <Dialog.Title>Generate a document</Dialog.Title>
         <Dialog.Description size="2" mb="4">
-          Use your offering's trained model to generate a BX document.
+          Use your offering&apos;s trained model to generate a BX document.
         </Dialog.Description>
 
         <Tabs.Root defaultValue="conversation-guide">

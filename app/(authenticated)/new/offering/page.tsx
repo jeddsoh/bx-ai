@@ -1,4 +1,3 @@
-'use client'
 
 import { Container, Heading, Button, Card, TextField } from '@radix-ui/themes'
 
