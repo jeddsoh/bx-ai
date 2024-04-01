@@ -1,14 +1,10 @@
+'use client'
+
 import {
   Section,
   Container,
   Flex,
-  Box,
   Heading,
-  Text,
-  Link,
-  Button,
-  Card,
-  TextField,
 } from '@radix-ui/themes'
 import OfferingDetails from './OfferingDetails'
 import KnowledgeBase from './KnowledgeBase'
@@ -19,9 +15,9 @@ export default function Home() {
   return (
     <Section>
       <Container size="1">
-        <Flex direction="column" align="stretch" gap='8'>
+        <Flex direction="column" align="stretch" gap="8">
           <Heading mb="4">Components</Heading>
-          <OfferingDetails/>
+          <OfferingDetails />
           <KnowledgeBase />
           <Training />
           <ConversationGuide />
