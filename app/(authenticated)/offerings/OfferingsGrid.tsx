@@ -8,11 +8,11 @@ export default async function OfferingsGrid() {
   let { data: offerings } = await supabase.from('offerings').select('*')
 
   return (
-    <Grid columns="4" gap="4" width='100%'>
+    <Grid columns="4" gap="4" width="100%">
       {offerings &&
         offerings.map((offering) => (
           <Card key="companyName" asChild>
-            <a href="/offering">
+            <a href={`/offerings/${offering.company_name}`}>
               <Heading size="3">{offering.company_name}</Heading>
               <Text>{offering.service}</Text>
             </a>

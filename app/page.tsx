@@ -6,6 +6,7 @@ import {
   Heading,
   Text,
   Link,
+  Button,
 } from '@radix-ui/themes'
 
 export default function Home() {
@@ -20,7 +21,14 @@ export default function Home() {
         >
           <Heading mb="4">Welcome to Business Experience AI</Heading>
           <Text mb="8">Developed by Nick and BX Team</Text>
-          <Link href="/login">Go to Log In</Link>
+          <Flex gap='3'>
+            <Button asChild>
+              <a href="/components">View Components</a>
+            </Button>
+            <Button asChild>
+              <a href="/login">Go to Live App</a>
+            </Button>
+          </Flex>
         </Flex>
       </Container>
     </section>

@@ -10,11 +10,10 @@ export default function PrivatePage() {
   return (
     <Container>
       <Flex direction="column" align="start" gap="4">
-        <Heading>Dashboard</Heading>
-        <Button asChild>
+        <Heading>Offerings</Heading>
+        <Button asChild size='1'>
           <a href="/new/offering">New Offering</a>
         </Button>
-        <Heading size="5">Offerings</Heading>
         <OfferingsGrid />
       </Flex>
     </Container>

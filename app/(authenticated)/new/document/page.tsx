@@ -60,10 +60,10 @@ export default async function NewOfferingPage() {
         </form>
       </Card>
       <Button asChild color="gray" variant="soft">
-        <a href="/offering">Cancel</a>
+        <a href="/offerings">Cancel</a>
       </Button>
       <Button asChild>
-        <a href="/offering">Generate Document</a>
+        <a href="/offerings">Generate Document</a>
       </Button>
     </Container>
   )

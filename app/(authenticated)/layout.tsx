@@ -1,5 +1,4 @@
-
-import { Avatar, Flex, Text, Button, Badge } from '@radix-ui/themes'
+import { Flex, Text, Button, Container } from '@radix-ui/themes'
 import { redirect } from 'next/navigation'
 
 import { createClient } from '@/utils/supabase/server'
@@ -18,16 +17,19 @@ export default async function RootLayout({
     redirect('/')
   }
   return (
-    <div >
-      <Flex py="4" width="100%" justify='between' align='center'>
-        <Flex gap='2' align='center'>        <Avatar size='1' fallback="W"></Avatar>
-        <Text>{data.user.email}</Text>
-        <Breadcrumbs/>
+    <Container>
+      <Flex mb="8" py="4" width="100%" justify="between" align="center">
+        <Flex gap="2" align="center">
+          <Breadcrumbs />
         </Flex>
-
-        <Button color='gray'>Log out</Button>
+        <Flex gap="4" align="center">
+          <Text>{data.user.email}</Text>
+          <Button variant="outline" color="red">
+            Log out
+          </Button>
+        </Flex>
       </Flex>
       {children}
-    </div>
+    </Container>
   )
 }

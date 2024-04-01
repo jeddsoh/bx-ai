@@ -38,7 +38,7 @@ export default async function NewOfferingPage() {
         </form>
       </Card>
       <Button asChild color="gray" variant="soft">
-        <a href="/dashboard">Cancel</a>
+        <a href="/offerings">Cancel</a>
       </Button>
       <Button asChild>
         <a href="/offering">Train Model</a>

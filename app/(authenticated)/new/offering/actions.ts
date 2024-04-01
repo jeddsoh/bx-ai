@@ -23,5 +23,5 @@ export async function createNewOffering(formData: { companyName: string; service
     }
   
     await revalidatePath('/'); // Adjust as needed
-    redirect('/dashboard'); // Redirecting after an async operation
+    redirect('/offerings'); // Redirecting after an async operation
   }

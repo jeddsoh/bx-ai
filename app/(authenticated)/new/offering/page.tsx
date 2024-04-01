@@ -42,7 +42,7 @@ export default async function NewOfferingPage() {
             <TextField.Slot></TextField.Slot>
           </TextField.Root>
           <Button asChild color="gray" variant="soft">
-            <a href="/dashboard">Cancel</a>
+            <a href="/offerings">Cancel</a>
           </Button>
           <Button>Create Offering</Button>
         </form>
