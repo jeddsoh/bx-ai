@@ -1,9 +1,10 @@
+'use client'
 
 import { Container, Heading, Button, Card, TextField } from '@radix-ui/themes'
 
 import { createNewOffering } from './actions'
 
-export default async function NewOfferingPage() {
+export default function NewOfferingPage() {
   const handleSubmit = async (event: any) => {
     event.preventDefault() // Prevent the default form submission behavior
 
