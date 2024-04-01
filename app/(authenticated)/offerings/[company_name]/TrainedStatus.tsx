@@ -2,6 +2,6 @@
 
 import { Badge } from '@radix-ui/themes'
 
-export default function TrainedStatus(color: string, label: string) {
+export default function TrainedStatus() {
   return <Badge color='red'>Not yet trained</Badge>
 }

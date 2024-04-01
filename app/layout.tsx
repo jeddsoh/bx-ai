@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Theme appearance='dark' accentColor='violet'>
+        <Theme appearance='light' accentColor='violet'>
           <main className='px-4'>
             {children}
             </main>
