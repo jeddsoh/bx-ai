@@ -11,9 +11,12 @@ import {
 import TrainedStatus from './TrainedStatus'
 import NewDocument from './NewDocument'
 
-export default async function Page() {
-  const companyName = 'company_name'
-
+// change company_name to id
+export default async function Page({
+  params,
+}: {
+  params: { company_name: string }
+}) {
   const generatedDocs = [
     {
       title: 'document-1.txt',
@@ -26,7 +29,7 @@ export default async function Page() {
   return (
     <Container>
       <Flex align="center" gap="4" mb="4">
-        <Heading>{companyName}</Heading>
+        <Heading>{params.company_name}</Heading>
         <TrainedStatus />
       </Flex>
       <Card>
