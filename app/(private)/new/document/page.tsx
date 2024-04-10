@@ -1,7 +1,5 @@
 import { redirect } from 'next/navigation'
 
-import { createClient } from '@/utils/supabase/server'
-
 import {
   Section,
   Container,
@@ -18,12 +16,6 @@ import {
 import { useState } from 'react'
 
 export default async function NewOfferingPage() {
-  const supabase = createClient()
-
-  const { data, error } = await supabase.auth.getUser()
-  if (error || !data?.user) {
-    redirect('/')
-  }
 
   return (
     <Container>
