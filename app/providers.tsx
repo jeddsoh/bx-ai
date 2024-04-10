@@ -1,7 +1,7 @@
 import { Theme, Button } from '@radix-ui/themes'
 import { useState } from 'react'
 
-export default function ThemeProvider({
+export function ThemeProvider({
   children,
 }: Readonly<{
   children: React.ReactNode

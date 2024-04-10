@@ -1,36 +1,10 @@
-import {
-  Section,
-  Container,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Link,
-  Button,
-} from '@radix-ui/themes'
+import { Button, Flex } from "@radix-ui/themes"
+import Link from "next/link"
 
-export default function Home() {
+export default function PrivatePage() {
   return (
-    <section>
-      <Container>
-        <Flex
-          direction="column"
-          align="center"
-          minHeight="100vh"
-          justify="center"
-        >
-          <Heading mb="4">Welcome to Business Experience AI</Heading>
-          <Text mb="8">Developed by Nick and BX Team</Text>
-          <Flex gap='3'>
-            <Button asChild>
-              <a href="/components">View Components</a>
-            </Button>
-            <Button asChild>
-              <a href="/login">Go to Live App</a>
-            </Button>
-          </Flex>
-        </Flex>
-      </Container>
-    </section>
+    <Link href='/dashboard'>
+      <Button>Enter App</Button>
+    </Link>
   )
 }

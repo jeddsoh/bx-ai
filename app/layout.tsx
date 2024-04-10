@@ -1,10 +1,10 @@
-
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
 import '@radix-ui/themes/styles.css'
 import { Theme } from '@radix-ui/themes'
-const inter = Inter({ subsets: ['latin'] })
+import { ClerkProvider } from '@clerk/nextjs'
+import { Navbar, Footer } from '@/components/navigation'
+import { bodyFont } from './fonts'
 
 export const metadata: Metadata = {
   title: 'Business Experience AI',
@@ -17,14 +17,18 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
-        <Theme accentColor='violet' appearance='dark'>
-          <main className='px-4'>
-            {children}
-            </main>
-        </Theme>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={bodyFont.className}>
+          <Theme accentColor="violet" appearance="dark">
+            <div className="flex flex-col h-screen p-4 gap-8">
+              <Navbar />
+              <main className="flex-1 overflow-auto">{children}</main>
+              <Footer />
+            </div>
+          </Theme>
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }

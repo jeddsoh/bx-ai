@@ -1,4 +1,3 @@
-import { login, signup } from './actions'
 import {
   Flex,
   Heading,
@@ -59,7 +58,7 @@ export default function LoginPage() {
                         ></TextField.Root>
                       </Flex>
                     </Flex>
-                    <Button formAction={login}>Log In</Button>
+                    <Button>Log In</Button>
                   </Flex>
                 </form>
               </Tabs.Content>
@@ -91,7 +90,7 @@ export default function LoginPage() {
                         ></TextField.Root>
                       </Flex>
                     </Flex>
-                    <Button formAction={signup}>Create account</Button>
+                    <Button>Create account</Button>
                   </Flex>
                 </form>
               </Tabs.Content>
