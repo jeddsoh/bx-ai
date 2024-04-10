@@ -1,14 +1,6 @@
 import { headingFont } from '../fonts'
 
-import {
-  Box,
-  Heading,
-  Container,
-  Button,
-  Grid,
-  Card,
-  Text,
-} from '@radix-ui/themes'
+import { Box, Heading, Container, Button, Grid, Card } from '@radix-ui/themes'
 
 import Link from 'next/link'
 
@@ -71,7 +63,9 @@ export default function DashboardPage() {
       <Box height="1.5rem"></Box>
       {mapOfferings()}
       <Box height="1rem"></Box>
-      <Button>New Offering</Button>
+      <Button asChild>
+        <Link href="/team/new/offering">New Offering</Link>
+      </Button>
     </Container>
   )
 }
