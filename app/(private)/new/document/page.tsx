@@ -1,7 +1,4 @@
-import { redirect } from 'next/navigation'
-
 import {
-  Section,
   Container,
   Flex,
   Box,
@@ -13,7 +10,6 @@ import {
   TextField,
   RadioCards,
 } from '@radix-ui/themes'
-import { useState } from 'react'
 
 export default async function NewOfferingPage() {
 
