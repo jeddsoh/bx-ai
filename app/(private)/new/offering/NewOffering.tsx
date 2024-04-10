@@ -11,23 +11,8 @@ import {
   Text,
 } from '@radix-ui/themes'
 
-import { createNewOffering } from './actions'
 
 export default function NewOffering() {
-  const handleSubmit = async (event: any) => {
-    event.preventDefault() // Prevent the default form submission behavior
-
-    // Construct an object with the input values
-    const formData = {
-      title: event.target.title.value,
-      service: event.target.service.value,
-    }
-
-    // Call your action function with the constructed object
-    await createNewOffering(formData)
-
-    // Redirecting is handled in createNewOffering, but you can also do it here if necessary
-  }
 
   return (
     <Dialog.Root>
@@ -41,7 +26,7 @@ export default function NewOffering() {
           Please provide some basic details about this offering, so that we
           might be able to establish some boundaries to generate text.
         </Dialog.Description>
-        <form onSubmit={handleSubmit}>
+        <form>
           <Flex direction="column" gap="3">
             <label>
               <Text as="div" size="2" mb="1" weight="bold">
